@@ -15,49 +15,38 @@ async function getValuesForSelectedTimeperiod() {
     const data = await res.json(); 
 
     data.forEach(date => {
-        if (date.title === 'Work') {
-            const workLastTimeperiod = document.getElementById('work-last-timeperiod'); 
-            const workCurrentValue = document.getElementById('work-current'); 
-            const workPreviousValue = document.getElementById('work-previous'); 
-
-            fillValues(workLastTimeperiod, workCurrentValue, workPreviousValue, selectedRadioBtn, date);
-
-        } else if (date.title === 'Play') {
-            const playLastTimeperiod = document.getElementById('play-last-timeperiod'); 
-            const playCurrentValue = document.getElementById('play-current'); 
-            const playPreviousValue = document.getElementById('play-previous'); 
-
-            fillValues(playLastTimeperiod, playCurrentValue, playPreviousValue, selectedRadioBtn, date);
-
-        } else if (date.title === 'Study') {
-            const studyLastTimeperiod = document.getElementById('study-last-timeperiod'); 
-            const studyCurrentValue = document.getElementById('study-current'); 
-            const studyPreviousValue = document.getElementById('study-previous'); 
-
-            fillValues(studyLastTimeperiod, studyCurrentValue, studyPreviousValue, selectedRadioBtn, date);
-
-        } else if (date.title === 'Exercise') {
-            const exerciseLastTimeperiod = document.getElementById('exercise-last-timeperiod'); 
-            const exerciseCurrentValue = document.getElementById('exercise-current'); 
-            const exercisePreviousValue = document.getElementById('exercise-previous'); 
-
-            fillValues(exerciseLastTimeperiod, exerciseCurrentValue, exercisePreviousValue, selectedRadioBtn, date);
-
-        } else if (date.title === 'Social') {
-            const socialLastTimeperiod = document.getElementById('social-last-timeperiod'); 
-            const socialCurrentValue = document.getElementById('social-current'); 
-            const socialPreviousValue = document.getElementById('social-previous'); 
-
-            fillValues(socialLastTimeperiod, socialCurrentValue, socialPreviousValue, selectedRadioBtn, date);
-
-        } else if (date.title === 'Self Care') {
-            const selfCareLastTimeperiod = document.getElementById('self-care-last-timeperiod'); 
-            const selfCareCurrentValue = document.getElementById('self-care-current'); 
-            const selfCarePreviousValue = document.getElementById('self-care-previous'); 
-
-            fillValues(selfCareLastTimeperiod, selfCareCurrentValue, selfCarePreviousValue, selectedRadioBtn, date);
+        switch (date.title) {
+            case 'Work': 
+                fillValues(getIdLastTimeperiod('work'), getIdCurrentValue('work'), getIdPreviousValue('work'), selectedRadioBtn, date);
+                break; 
+            case 'Play': 
+                fillValues(getIdLastTimeperiod('play'), getIdCurrentValue('play'), getIdPreviousValue('play'), selectedRadioBtn, date);
+                break; 
+            case 'Study':
+                fillValues(getIdLastTimeperiod('study'), getIdCurrentValue('study'), getIdPreviousValue('study'), selectedRadioBtn, date);
+                break; 
+            case 'Exercise':
+                fillValues(getIdLastTimeperiod('exercise'), getIdCurrentValue('exercise'), getIdPreviousValue('exercise'), selectedRadioBtn, date);
+                break; 
+            case 'Social':
+                fillValues(getIdLastTimeperiod('social'), getIdCurrentValue('social'), getIdPreviousValue('social'), selectedRadioBtn, date);
+                break;
+            case 'Self Care':
+                fillValues(getIdLastTimeperiod('self-care'), getIdCurrentValue('self-care'), getIdPreviousValue('self-care'), selectedRadioBtn, date);
         }
     }); 
+}
+
+function getIdLastTimeperiod(casename) {
+    return document.getElementById(`${casename}-last-timeperiod`);
+}
+
+function getIdCurrentValue(casename) {
+    return document.getElementById(`${casename}-current`); 
+}
+
+function getIdPreviousValue(casename) {
+    return document.getElementById(`${casename}-previous`);
 }
 
 function fillValues(lastTimeperiod, currentValue, previousValue, selectedRadioBtn, date) {
