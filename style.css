@@ -36,6 +36,7 @@ h1 {
 
 small {
     color: var(--pale-blue);
+    font-size: 0.7rem;
 }
 
 #container {
@@ -59,10 +60,66 @@ small {
 
 /* main card styling */
 
+#main-card .content {
+    padding: 30px 30px 80px 30px;
+}
+
+#main-card .content > img {
+    width: 60px;
+    margin-bottom: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+#main-card nav {
+    flex-direction: column;
+    margin: 20px;
+}
+
+#main-card nav label {
+    cursor: pointer;
+    color: var(--desaturated-blue);
+    font-size: 0.9rem;
+}
+
+input[type="radio"] {
+    visibility: hidden;
+}
+
+input[type="radio"]:checked + label {
+    color: #fff !important;
+}
+
+#main-card nav label:hover {
+    color: #fff;
+}
+
 /* other card styling */
 
-.content-header {
+#main-card,
+#main-card .content,
+.card {
+    border-radius: 20px;
+}
+
+.card > div {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card .content {
+    transform: translateY(-15px);
+    padding: 20px;
+}
+
+.card .content .content-header {
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card .content h1 {
+    margin-bottom: 10px;
 }
 
 /* background-color-styling for the different cards */
@@ -72,26 +129,38 @@ small {
 }
 
 #work-card > div:nth-child(1) {
+    height: 60px;
+    background: url('img/icon-work.svg') no-repeat right;
     background-color: var(--work-card);
 }
 
 #play-card > div:nth-child(1) {
+    height: 60px;
+    background: url('img/icon-play.svg') no-repeat right;
     background-color: var(--play-card);
 }
 
 #study-card > div:nth-child(1) {
+    height: 60px;
+    background: url('img/icon-study.svg') no-repeat right;
     background-color: var(--study-card);
 }
 
 #exercise-card > div:nth-child(1) {
+    height: 60px;
+    background: url('img/icon-exercise.svg') no-repeat right;
     background-color: var(--exercise-card);
 }
 
 #social-card > div:nth-child(1) {
+    height: 60px;
+    background: url('img/icon-social.svg') no-repeat right;
     background-color: var(--social-card);
 }
 
 #self-care-card > div:nth-child(1) {
+    height: 60px;
+    background: url('img/icon-self-care.svg') no-repeat right;
     background-color: var(--self-care-card);
 }
 
