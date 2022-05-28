@@ -1,10 +1,4 @@
 const menu = document.getElementById('radiomenu'); 
-const workCard = document.getElementById('work'); 
-const playCard = document.getElementById('play'); 
-const studyCard = document.getElementById('study'); 
-const exerciseCard = document.getElementById('exercise'); 
-const socialCard = document.getElementById('social'); 
-const selfCareCard = document.getElementById('self-care'); 
 
 getValuesForSelectedTimeperiod();
 
