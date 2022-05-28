@@ -128,37 +128,37 @@ input[type="radio"]:checked + label {
     background-color: var(--main-card);
 }
 
-#work-card > div:nth-child(1) {
+#work > div:nth-child(1) {
     height: 60px;
     background: url('img/icon-work.svg') no-repeat right;
     background-color: var(--work-card);
 }
 
-#play-card > div:nth-child(1) {
+#play > div:nth-child(1) {
     height: 60px;
     background: url('img/icon-play.svg') no-repeat right;
     background-color: var(--play-card);
 }
 
-#study-card > div:nth-child(1) {
+#study > div:nth-child(1) {
     height: 60px;
     background: url('img/icon-study.svg') no-repeat right;
     background-color: var(--study-card);
 }
 
-#exercise-card > div:nth-child(1) {
+#exercise > div:nth-child(1) {
     height: 60px;
     background: url('img/icon-exercise.svg') no-repeat right;
     background-color: var(--exercise-card);
 }
 
-#social-card > div:nth-child(1) {
+#social > div:nth-child(1) {
     height: 60px;
     background: url('img/icon-social.svg') no-repeat right;
     background-color: var(--social-card);
 }
 
-#self-care-card > div:nth-child(1) {
+#self-care > div:nth-child(1) {
     height: 60px;
     background: url('img/icon-self-care.svg') no-repeat right;
     background-color: var(--self-care-card);

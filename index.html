@@ -18,76 +18,76 @@
             <nav id="radiomenu" class="flex">
                 <input type="radio" name="timeperiod" id="daily" value="daily">
                 <label for="daily">Daily</label>
-                <input type="radio" name="timeperiod" id="weekly" value="weekly">
+                <input type="radio" name="timeperiod" id="weekly" value="weekly" checked>
                 <label for="weekly">Weekly</label>
                 <input type="radio" name="timeperiod" id="monthly" value="monthly">
                 <label for="monthly">Monthly</label>
             </nav>
         </div>
-        <div id="work-card" class="card">
+        <div id="work" class="card">
             <div></div>
             <div class="content flex">
                 <div class="content-header flex">
                     <h4>Work</h4>
                     <img src="img/icon-ellipsis.svg">
                 </div>
-                <h1>32hrs</h1>
-                <small>Last Week - 36hrs</small>
+                <h1><span id="work-current">32</span>hrs</h1>
+                <small>Last <span id="work-last-timeperiod">Week</span> - <span id="work-previous">36</span>hrs</small>
             </div>
         </div>
-        <div id="play-card" class="card">
+        <div id="play" class="card">
             <div></div>
             <div class="content flex">
                 <div class="content-header flex">
                     <h4>Play</h4>
                     <img src="img/icon-ellipsis.svg">
                 </div>
-                <h1>10hrs</h1>
-                <small>Last Week - 8hrs</small>
+                <h1><span id="play-current">10</span>hrs</h1>
+                <small>Last <span id="play-last-timeperiod">Week</span> - <span id="play-previous">8</span>hrs</small>
             </div>
         </div>
-        <div id="study-card" class="card">
+        <div id="study" class="card">
             <div></div>
             <div class="content flex">
                 <div class="content-header flex">
                     <h4>Study</h4>
                     <img src="img/icon-ellipsis.svg">
                 </div>
-                <h1>4hrs</h1>
-                <small>Last Week - 7hrs</small>
+                <h1><span id="study-current">4</span>hrs</h1>
+                <small>Last <span id="study-last-timeperiod">Week</span> - <span id="study-previous">7</span>hrs</small>
             </div>
         </div>
-        <div id="exercise-card" class="card">
+        <div id="exercise" class="card">
             <div></div>
             <div class="content flex">
                 <div class="content-header flex">
                     <h4>Exercise</h4>
                     <img src="img/icon-ellipsis.svg">
                 </div>
-                <h1>4hrs</h1>
-                <small>Last Week - 5hrs</small>
+                <h1><span id="exercise-current">4</span>hrs</h1>
+                <small>Last <span id="exercise-last-timeperiod">Week</span> - <span id="exercise-previous">5</span>hrs</small>
             </div>
         </div>
-        <div id="social-card" class="card">
+        <div id="social" class="card">
             <div></div>
             <div class="content flex">
                 <div class="content-header flex">
                     <h4>Social</h4>
                     <img src="img/icon-ellipsis.svg">
                 </div>
-                <h1>5hrs</h1>
-                <small>Last Week - 10hrs</small>
+                <h1><span id="social-current">5</span>hrs</h1>
+                <small>Last <span id="social-last-timeperiod">Week</span> - <span id="social-previous">10</span>hrs</small>
             </div>
         </div>
-        <div id="self-care-card" class="card">
+        <div id="self-care" class="card">
             <div></div>
             <div class="content flex">
                 <div class="content-header flex">
                     <h4>Self Care</h4>
                     <img src="img/icon-ellipsis.svg">
                 </div>
-                <h1>2hrs</h1>
-                <small>Last Week - 2hrs</small>
+                <h1><span id="self-care-current">2</span>hrs</h1>
+                <small>Last <span id="self-care-last-timeperiod">Week</span> - <span id="self-care-previous">2</span>hrs</small>
             </div>
         </div>
     </div>
