@@ -124,7 +124,8 @@ input[type="radio"]:checked + label {
 
 /* background-styling for the different cards */
 
-#main-card .content {
+#main-card .content,
+#main-card .content > div {
     background-color: var(--main-card);
 }
 
@@ -172,4 +173,32 @@ input[type="radio"]:checked + label {
 
 .flex {
     display: flex;
+}
+
+/* responsive design */
+
+@media(max-width: 900px) {
+    #container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #main-card .content {
+        flex-direction: row;
+        gap: 20px;
+        padding: 30px 30px 20px 30px;
+    }
+
+    #main-card nav {
+        flex-direction: row;
+    }
+
+    .card .content {
+        padding: 20px 20px 0 20px;
+    }
+
+    .card .content > div:nth-child(2) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
